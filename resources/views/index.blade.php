@@ -37,11 +37,11 @@
             <label for="jumlah" class="form-label">Jumlah Setor</label>
             <input type="number" class="form-control" id="jumlah" placeholder="Masukkan jumlah setor">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <div class="custom-file" >
-            <input type="file" class="cuotom-file-input" id="custom-file" multiple>
+        <div class="mb-3">
             <label for="customfile" class="custom-file-label">Pilih File</label> 
+            <input type="file" class="form-control" id="custom-file" multiple>
         </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
 
