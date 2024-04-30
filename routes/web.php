@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\back\postController;
 use App\Http\Controllers\dashboardController;
 
 /*
@@ -15,5 +16,6 @@ use App\Http\Controllers\dashboardController;
 */
 
 Route::get('/',[dashboardController::class,'index']);
+Route::post('/postdata',[dashboardController::class,'postdata']);
 
 
