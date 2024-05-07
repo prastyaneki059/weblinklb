@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class dashboardController extends Controller
 {
     public function index(){
-        $getMt = masterstore::all();
+        $getMt = masterstore::orderBy('name_store','asc')->get();
         $getshift = shift::get();
         return view('/index',['getMt'=>$getMt,'getshift'=>$getshift]);
     }
