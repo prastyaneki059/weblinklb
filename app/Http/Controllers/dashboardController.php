@@ -6,6 +6,7 @@ use App\Models\shift;
 use App\Models\closingeod;
 use App\Models\masterstore;
 use Illuminate\Http\Request;
+use App\Http\Requests\postRequest;
 
 class dashboardController extends Controller
 {
@@ -22,6 +23,6 @@ class dashboardController extends Controller
             $validasidata['gambar'] = $path;
         }
        $formdata = closingeod::create($validasidata);
-       return response()->json(['message'=>'data','sukses'=>$validasidata]);
+       return response()->json(['message'=>'data','sukses'=>$formdata]);
     }
 }

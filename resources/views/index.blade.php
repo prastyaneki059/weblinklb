@@ -40,7 +40,7 @@
         <form action="upload.php" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="gambar" class="form-label">Pilih Gambar</label>
-          <input type="file" class="form-control" id="gambar" name="gambar[]" multiple>
+          <input type="file" class="form-control" id="gambar" name="gambar" multiple>
         </div>
         <div class="d-grid gap-2">
         <button type="button" onclick="sendData()" class="btn btn-primary" class="col">POSTING</button>
@@ -52,8 +52,8 @@
 <script src="https://code.jquery.com/jquery-4.0.0-beta.min.js">
 </script>
 <script>
-    var form = new FormData($('#dataform')[0]);
     function sendData(){
+    var form = new FormData($('#dataform')[0]);
         $.ajax({
             type : 'POST',
             url  :  '{{url("/postdata")}}',
