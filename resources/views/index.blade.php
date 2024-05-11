@@ -37,11 +37,14 @@
             <label for="jumlah" class="form-label">Jumlah Setor</label>
             <input type="number" class="form-control" id="setor_tunai" name="setor_tunai" placeholder="Masukkan jumlah setor">
         </div>
-        <div class="custom-file" >
-            <input type="file" class="cuotom-file-input" id="gambar" name="gambar" multiple>
-            <label for="customfile" class="custom-file-label">Pilih File</label> 
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="gambar" class="form-label">Pilih Gambar</label>
+          <input type="file" class="form-control" id="gambar" name="gambar[]" multiple>
         </div>
-        <button type="button" onclick="sendData()" class="btn btn-primary">Submit</button>
+        <div class="d-grid gap-2">
+        <button type="button" onclick="sendData()" class="btn btn-primary" class="col">POSTING</button>
+        </div>
     </form>
 </div>
 <br><br><br><br>
