@@ -53,7 +53,7 @@
     function sendData(){
         $.ajax({
             type : 'POST',
-            url  :  '{{url("postdatas")}}',
+            url  :  '{{url("/postdata")}}',
             data : form,
             processData : false,
             contentType : false,
