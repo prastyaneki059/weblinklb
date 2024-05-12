@@ -23,6 +23,6 @@ class dashboardController extends Controller
             $validasidata['gambar'] = $path;
         }
        $formdata = closingeod::create($validasidata);
-       return response()->json(['message'=>'data','sukses'=>$validasidata]);
+       return response()->json(['message'=>'data','sukses'=>$formdata]);
     }
 }
