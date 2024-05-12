@@ -44,8 +44,13 @@
           <input type="file" class="form-control" id="gambar" name="gambar" multiple>
         </div>
         <div class="d-grid gap-2">
-        <button type="button" onclick="sendData()" class="btn btn-primary" class="col">POSTING</button>
+        <button type="button" onclick="sendData()" class="btn btn-primary" id="d1" class="col">POSTING</button>
+        <button class="btn btn-primary d-none" type="button" id="d2" disabled>
+            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+            <span role="status">Loading...</span>
+          </button>
         </div>
+        
     </form>
 </div>
 <br><br><br><br>
@@ -55,6 +60,8 @@
 <script>
     function sendData(){
     var form = new FormData($('#dataform')[0]);
+        $('#d1').addClass('d-none');
+       $('#d2').removeClass('d-none');
         $.ajax({
             type : 'POST',
             url  :  '{{url("postdata")}}',
@@ -63,9 +70,13 @@
             contentType : false,
             success : function(response){
                 alert('data berhasil terkirim')
+                $('#d2').addClass('d-none');
+                $('#d1').removeClass('d-none');
             },
             error : function(error){
                 alert('gagal terkirim')
+                $('#d2').addClass('d-none');
+                $('#d1').removeClass('d-none');
             }
         })
     }
