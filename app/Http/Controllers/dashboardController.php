@@ -26,7 +26,7 @@ class dashboardController extends Controller
        return response()->json(['message'=>'data','sukses'=>$formdata]);
     }
     public function reportSetoran(){
-        $datas = closingeod::get();
+        $datas = closingeod::simplePaginate(10);
         return view('/reportSetoran',['datas'=>$datas]);
     }
 }

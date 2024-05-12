@@ -70,6 +70,7 @@
             contentType : false,
             success : function(response){
                 alert('data berhasil terkirim')
+                $('#dataform')[0].reset();
                 $('#d2').addClass('d-none');
                 $('#d1').removeClass('d-none');
             },
