@@ -56,7 +56,7 @@
     var form = new FormData($('#dataform')[0]);
         $.ajax({
             type : 'POST',
-            url  :  '{{url("postdatas")}}',
+            url  :  '{{url("postdata")}}',
             data : form,
             processData : false,
             contentType : false,
