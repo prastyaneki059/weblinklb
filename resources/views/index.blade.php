@@ -5,7 +5,7 @@
 <form id="dataform">
     @csrf
     <div>
-        <h2 class="alert alert-primary text-center mt-3">Form Laporan Setor Tunai</h2>
+        <h2 class="alert alert-primary text-center mt-3 " id="Judul-H2">Form Laporan Setor Tunai</h2>
     </div>
         <div class="mb-3">
             <label for="namaKasir" class="form-label">Nama Kasir</label>
@@ -56,7 +56,7 @@
     function sendData(){
         $.ajax({
             type : 'POST',
-            url  :  '{{url("postdatas")}}',
+            url  :  '{{url("postdata")}}',
             data : form,
             processData : false,
             contentType : false,
