@@ -17,5 +17,7 @@ use App\Http\Controllers\dashboardController;
 
 Route::get('/',[dashboardController::class,'index']);
 Route::post('/postdata',[dashboardController::class,'postdata']);
+Route::get('/reportSetoran',[dashboardController::class,'reportSetoran']);
+
 
 

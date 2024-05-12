@@ -4,6 +4,7 @@
 <div class="container min-vh-100 d-flex justify-content-center" >
 <form id="dataform">
     @csrf
+    <br><br><br>
     <div>
         <h2 class="alert alert-primary text-center mt-3 " id="Judul-H2">Form Laporan Setor Tunai</h2>
     </div>
