@@ -1,4 +1,4 @@
-<nav class="navbar bg-body-tertiary fixed-top">
+ <!-- #region <nav class="navbar bg-body-tertiary fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#"><img src="{{url('img/itsupport-2.png')}}" alt="" class="image-fluid"></a>
       <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -28,4 +28,4 @@
       </div>
     </div>
   </nav>
-  
+  -->
